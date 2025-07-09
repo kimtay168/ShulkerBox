@@ -1,0 +1,5 @@
+name: BetterShulker
+version: '1.0-SNAPSHOT'
+main: kingtayy.BetterShulker
+api-version: '1.21'
+authors: [ KingTayy ]
