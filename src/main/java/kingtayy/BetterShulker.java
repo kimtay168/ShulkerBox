@@ -62,10 +62,8 @@ public class BetterShulker extends JavaPlugin implements Listener {
             return;
         }
 
-        // Apply 3s cooldown
         cooldowns.put(uuid, System.currentTimeMillis() + 3000);
 
-        // Open real shulker inventory and track for save + lock
         if (item.getItemMeta() instanceof BlockStateMeta meta &&
                 meta.getBlockState() instanceof ShulkerBox shulkerBox) {
             Inventory shulkerInventory = shulkerBox.getInventory();
@@ -106,7 +104,7 @@ public class BetterShulker extends JavaPlugin implements Listener {
             }
         }
 
-        // Also block putting any shulker boxes into this one
+
         ItemStack current = event.getCurrentItem();
         if (current != null && current.getType().name().endsWith("SHULKER_BOX")) {
             event.setCancelled(true);
